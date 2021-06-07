@@ -3,10 +3,14 @@ Papildoma egzamino užduotis
 
 ## Naudojimo instrukcija
 
-  1.Parsisiunčiam ir išsiarchyvuojam faila
-  2.Tada jį paleidžiame per mūsų pasirinkta IDE
-  3.Isidedame į programos aplanka naudojama .txt faila arba naudojame pridėta pavyzdinį faila
-  4.Paleidžiame programa ivedame failas.txt ar kita idėta failą
+  1.Parsisiunčiam ir išsiarchyvuojam aplanką  
+  
+  2.Tada jį paleidžiame per mūsų pasirinktą IDE
+  
+  3.Įsidedame į programos aplanką naudojamą .txt failą arba naudojame pridėtą pavyzdinį failą
+  
+  4.Paleidžiame programą įvedame failas.txt ar kito idėto failo pavadinimą
+ 
 ### Pavyzdys
 ``` powershell
 Is kokio failo norite traukti teksta?(del geriausio rezultato naudokite lietuviska rasvedybos faila)
@@ -21,7 +25,7 @@ www.vu.lt
   
 ## Užduočių ivykdymo rezultatai
 
-  1. Užduotis sukuria rezultatai.txt failą ir jame ikelia visus žodžius, kurie pasikartojo daugiau nei 1 kartą
+  1. Užduotis sukuria rezultatai.txt failą ir jame įkelia visus žodžius, kurie pasikartojo daugiau nei 1 kartą
 PVZ.
 Zodis -'ir' pasikartoja 46 kartus
   2. Užduotis į sukurtą failą prie žodžių parašo, kuriose eilutėse pasirodo žodžiai

@@ -23,6 +23,7 @@
 #include <iterator>
 #include <map>
 #include <locale>
+#include <regex>
 
 
 
@@ -53,7 +54,7 @@ using std::uninitialized_copy;
 using std::equal;
 using std::remove_if;
 using std::locale;
-
+using std::regex;
 
 
 

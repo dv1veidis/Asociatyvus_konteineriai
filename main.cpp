@@ -1,4 +1,3 @@
-#include <iostream>
 #include "My_lib.h"
  
 using namespace std;
@@ -13,18 +12,19 @@ vector<int> eilutes;
 bool compare (elements A,elements B) { return (A.kiekis>B.kiekis);}
 
 string check (string word){
+    //regex url("(((http|https)://)?www\\.)?[a-zA-Z0-9@:%._\\+~#?&//=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)");
     string urlCheck;
     string wwwCheck;
     if(!word.empty()){
-        for(int i=0; i<8; i++){
-            urlCheck+=word[i];
+        for(int i=1; i<word.length()-1;i++){
+            if(word[i]=='.' && isalnum(word[0])){
+                if(word[word.length()-1]=='/'|| isalnum(word[word.length()-1])){
+                    return "This is a link";
+                    break;
+                } 
+            }
         }
-        for(int j=0; j<4; j++){
-            wwwCheck+=word[j];
-        }
-    if(urlCheck == "https://" || wwwCheck=="www."){
-        return "This is a link";
-    }
+        
     }
 
     int skaicius;
@@ -42,7 +42,7 @@ string check (string word){
     }
     
     if(!word.empty()) {
-        if( (word[0] >= 'a' && word[0] <= 'z') || (word[0] >= 'A' && word[0] <= 'Z')){
+        if( (word[0] >= 'A' && word[0] <= 'Z')){
             word[0]=tolower(word[0]);
     }
     }
@@ -133,8 +133,11 @@ int main()
     cout<<"Is kokio failo norite traukti teksta?(del geriausio rezultato naudokite lietuviska rasvedybos faila)"<<endl;
     cout<<"Iveskite formatu 'pavyzdys.txt'"<<endl;
     cin>>failas;
+    auto start = std::chrono::high_resolution_clock::now(); auto st=start;
     ivedimas(unikalus, elementai, failas);
     isvedimas(elementai);
+    std::chrono::duration<double> diff2 = std::chrono::high_resolution_clock::now()-start; // Skirtumas (s)
+    cout <<"Programos trukmes laikas: "<<diff2.count() << " s\n";
     
 
 
